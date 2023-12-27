@@ -1,0 +1,43 @@
+WEB SERVER APACHE Multiport
+
+<VirtualHost _default_:8090>
+	DocumentRoot "D:/laragon/www/livewire3/public"
+    <Directory "D:/laragon/www/livewire3/public">
+       Options All
+	    AllowOverride All
+		Order allow,deny
+		Allow from all
+        Require all granted
+    </Directory>
+	ErrorLog "logs/logs-error.log"
+	CustomLog "logs/logs-access.log" combined
+	AllowEncodedSlashes On
+</VirtualHost>
+
+<VirtualHost _default_:8091>
+	DocumentRoot "D:/laragon/www/example-sd/public"
+    <Directory "D:/laragon/www/example-sd/public">
+       Options All
+	    AllowOverride All
+		Order allow,deny
+		Allow from all
+        Require all granted
+    </Directory>
+	ErrorLog "logs/logs-error.log"
+	CustomLog "logs/logs-access.log" combined
+	AllowEncodedSlashes On
+</VirtualHost>
+
+<VirtualHost _default_:8092>
+	DocumentRoot "D:/laragon/www/example-smp/public"
+    <Directory "D:/laragon/www/example-smp/public">
+       Options All
+	    AllowOverride All
+		Order allow,deny
+		Allow from all
+        Require all granted
+    </Directory>
+	ErrorLog "logs/logs-error.log"
+	CustomLog "logs/logs-access.log" combined
+	AllowEncodedSlashes On
+</VirtualHost>
